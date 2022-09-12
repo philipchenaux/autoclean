@@ -1,7 +1,7 @@
 # autoClean: Automated Data Cleaning Tool
 
 ## Overview
-For this project, I implemented an interactive tool that as input takes a dataset and eventually yields a cleaned
+For this project, I implemented an interactive tool that as input takes a dataset and eventually yields a "cleaned"
 dataset. I would like to emphasize the interactive aspect of this tool; my automated data cleaning algorithm
 (called autoClean) leverages human expertise to help make certain decisions when cleaning the dataset. These
 specific decisions will be outlined in the subsequent section of the report. I also would like to note that the
