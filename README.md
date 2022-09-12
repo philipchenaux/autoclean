@@ -123,27 +123,3 @@ balance that users ideally want to achieve through this cleaning process where t
 without altering the underlying trends that the dataset raises. Even though autoClean may not be able to provide
 an optimally cleaned dataset that perfectly strikes this balance, it offers the necessary tools for the user to try to
 get as close to it as possible.
-
-## Sample Dataset Performance
-The dataset that is also submitted with the code is the data about whether individuals were approved to receive a loan used in an
-earlier assignment. I manipulated these datasets slightly so that they would work better with the algorithm (i.e. to show off more of its capabilities). But again, I strongly encourage you to test out running autoClean yourself on these provided datasets or any of your own to see how it performs. In the exploratory phase of autoClean, we can see that the dataset has some missing data in 4 of the 12 columns. The tool shows a handful of other visualizations, but one of which displays the most common data entries for each column, in addition to the distribution of each of the variables (below is the histogram of income). This will give us an indication of the range of values if we were to drop outliers later.
-
-Below is an example of a data cleaning process happening during the non-numerical phase where initially we see that there are several ‘unique’ entries in the ‘race’ column that we would classify as the same. Specifically, we have several instances of misspelled words, as well as what appear to be inconsistent instances of leading and trailing spaces. autoClean first addresses the formatting issues and then addresses misspellings of certain words like “Asiaan” and “Blck.” Note that by the end we have a set of six categories which is the desired outcome.
-
-Next, when addressing duplicates in the data, I eventually used the ‘smart duplication deletion’
-method which yielded the set of following supposed identical results below. You can see that some
-human intuition is required in this stage to determine that these are likely duplicates, but the algorithm
-does a good job in identifying these similarities and is therefore, a very powerful tool when identifying
-similar rows. 
-
-In the final stage of data cleaning where missing data is addressed, we are first shown a series
-of helpful visualizations that depict the extent of the missing data. Note that these are not all the
-visualizations and I encourage you to explore the charts. But we can see that the income column is
-missing quite a few entries. One of the other visualizations maps the correlations between data which
-indicates that the missing income data is likely MCAR. Then when addressing the missing data, I
-simply imputed ‘None’ into the ‘race’ column and for ‘gender’ I imputed the most common data
-gender. Note that this is just for the purpose of demonstration, and by no means are the recommended
-steps to be taken at this stage. For the missing ZIP codes, I tried the advanced KNN imputation method
-and for income, I used the MICE imputation method. The results can be explored in-depth with the
-various charts in the final stage of autoClean, but it is interesting to see how various characteristics
-change after data cleaning.
